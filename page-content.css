@@ -180,8 +180,8 @@ li {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 80px;
-  padding: 100px 20px;
-  margin-top: 150px;
+  padding: 10px 20px;
+  margin-top: 10px;
   margin-left: 60px;
 }
 
@@ -269,6 +269,7 @@ form button[type="submit"]:active {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: background-color 0.3s; /* Add smooth transition for background color change */
 }
+
 .game-box h2 {
   font-size: 1.5em;
   margin-bottom: 10px;
@@ -286,4 +287,96 @@ form button[type="submit"]:active {
 /* Active (clicked) effect */
 .game-box:active {
   background-color: #222; /* Even darker background color */
+}
+
+.vertical-menu {
+  background-color: #001e45;
+  border: 2px solid #0061c3;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 10px;
+  color: white;
+  width: 200px;
+  margin: 30px;
+}
+
+.vertical-menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.vertical-menu ul h2 {
+  margin-bottom: 10px;
+}
+
+.vertical-menu ul li {
+  padding: 8px;
+}
+
+.vertical-menu ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+.vertical-menu ul li a:hover {
+  background-color: #0061c3;
+  border-radius: 5px;
+}
+
+.grid-container {
+  display: flex;
+  flex-wrap: wrap; 
+  margin-left: 100 px;
+  margin-right: 40 px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr); 
+  grid-gap: 20px;
+  margin: 20px;
+}
+
+
+.grid-item {
+  background-color: #db5aba;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+.grid-item:hover {
+  background-color: #913e7c;
+  cursor: pointer;
+}
+
+.grid-item:active {
+  background-color: #f08fd8;
+}
+
+.grid-item h2 {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.grid-item p {
+  margin-bottom: 10px;
+}
+
+.grid-item img {
+  float: right;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.small-image {
+  width: 700px;
+  height: auto;
+  margin-left: 300px;
+  margin-bottom: 30px;
 }
