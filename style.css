@@ -9,10 +9,13 @@ header {
     color: #fff;
     text-align: center;
     padding: 20px 0;
-    position: fixed;
+    position: flex;
     width: 100%;
     top: 0;
     z-index: 1000;
+    flex-direction: column;
+
+    align-items: flex-end;
 }
 
 h1 {
@@ -108,7 +111,7 @@ footer p {
     justify-content: center;
     align-items: flex-start; 
     gap: 20px; 
-    padding-top: 170px; 
+    padding-top: 10px; 
 }
 
 .text-content {
@@ -147,7 +150,7 @@ footer p {
     height: 300px;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 20px; 
-    margin: 200px auto; 
+    margin: 20px auto; 
     display: flex;
     justify-content: center;
     align-items: center;
