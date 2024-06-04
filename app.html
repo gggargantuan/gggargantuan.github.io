@@ -1,0 +1,61 @@
+from flask import Flask, request, render_template_string
+from flask_mail import Mail, Message
+
+app = Flask(__name__)
+
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+app.config['MAIL_PORT'] = 587
+app.config['MAIL_USE_TLS'] = True
+app.config['MAIL_USERNAME'] = 'your_email@gmail.com'
+app.config['MAIL_PASSWORD'] = 'your_password'
+
+mail = Mail(app)
+
+@app.route('/contact', methods=['POST'])
+def contact():
+    email = request.form['email']
+    message = request.form['message']
+    msg = Message('New Contact Form Submission',
+                  sender='your_email@gmail.com',
+                  recipients=['casarolespoint@gmail.com'])
+    msg.body = f'Email: {email}\nMessage: {message}'
+    mail.send(msg)
+    return 'Message sent successfully!', 200
+
+@app.route('/')
+def index():
+    return render_template_string('''
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Simple Website</title>
+    </head>
+    <body>
+        <header>
+            <img src="images/logo.png" alt="Logo">
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </nav>
+        </header>
+        <main>
+            <h1>Welcome to My Simple Website</h1>
+            <form action="/contact" method="post">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <br>
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+                <br>
+                <button type="submit">Изпрати</button>
+            </form>
+        </main>
+    </body>
+    </html>
+    ''')
+
+if __name__ == '__main__':
+    app.run(debug=True)

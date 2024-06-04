@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Simple Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="page-content.css">
+    <!-- Include Google Maps authorization script in the head section -->
+    <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=d6e5ef51162f7d29b2d28090cdb6eb396f2dfc75'></script>
+</head>
+<body>
+    <!-- Header Content -->
+    <header>
+        <nav class="menu">
+            <h1 class="header-title">РЕТРО ИГРИ</h1>
+            <ul>
+                <li><a href="index.html">Начало</a></li>
+                <li><a href="about.html">За сайта</a></li>
+                <li><a href="catalog.html">Каталог</a></li>
+                <li><a href="gallery.html">Галерия</a></li>
+                <li><a href="contact.html">Контакти</a></li>
+            </ul>
+        </nav>
+        <button id="toggleMenuBtn">O</button> <!-- Toggle button remains separate -->
+    </header>
+    
+    
+    <main>
+        <div class="content">
+            <h2>Свържете се с нас:</h2>
+        <p>Телефон за връзка: +27 183 172 8778</p>
+        <p>Имейл: horseplinko@honse.hs</p>
+        <p>Офис:</p> 
+        
+        <!-- Embed Google Maps inside a div -->
+        <div id="googleMap">
+            <iframe width="520" height="406" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" id="gmap_canvas" src="https://maps.google.com/maps?width=520&amp;height=406&amp;hl=en&amp;q=g.k.%20Ovcha%20kupel%202,%20ul.%20%22Montevideo%22%2021%20Sofia+(New%20Bulgarian%20University)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe> <a href='https://hauckautoren.de/schreiben-einer-masterarbeit'>Hauckautoren Masterarbeit</a> <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=d6e5ef51162f7d29b2d28090cdb6eb396f2dfc75'></script>
+        <p>ж.к. Овча купел, улица Монтевидео 21</p>
+        <p>1618, гр. София </p>
+        <hr>
+        <hr>
+        <h2>Изпратете запитване:</h2>
+       
+
+        <form action="/contact" method="post">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <label for="message">Съобщение:</label>
+            <textarea id="message" name="message" required></textarea>
+            <br>
+            <button type="submit">Изпрати</button>
+        </form>
+<hr>
+<hr>
+</div>  
+    
+    </main>
+    
+    <footer>
+        <p>&copy; 2024</p>
+        <p>Всички права са запазени</p>
+        <p>F104518</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
