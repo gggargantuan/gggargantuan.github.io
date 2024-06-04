@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Simple Website</title>
+    <title>Каталог</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="page-content.css"> <!-- Add a separate CSS file for page-specific content -->
+    <link rel="stylesheet" href="page-content.css"> 
 </head>
 <body>
-    <!-- Header Content -->
+    
     <header>
         <nav class="menu">
             <h1 class="header-title">РЕТРО ИГРИ</h1>
@@ -20,13 +20,102 @@
                 <li><a href="contact.html">Контакти</a></li>
             </ul>
         </nav>
-        <button id="toggleMenuBtn">O</button> <!-- Toggle button remains separate -->
+
     </header>
 
-<main>    
-    <div id="catalogue" class="gallery"></div>
-</main>
 
+    <main>    
+    
+
+        <div class="container">
+            <img src="image12.png" alt="Banner" class="small-image">
+            <nav class="vertical-menu">
+                <ul>
+                    <input type="text" id="searchInput" placeholder="Search titles...">
+                    <button onclick="searchTitles()">Търси</button>
+                    <hr>
+                    <hr>
+                    <h2>Най-популярни:</h2>
+                    <br>
+                    <br>
+                    <li><a href="#">RPG</a></li>
+                    <li><a href="#">Симулатор</a></li>
+                    <li><a href="#">Стратегия</a></li>
+                    <li><a href="#">Open-World</a></li>
+                    <li><a href="#">Pokemon</a></li>
+                    <li><a href="#">The Legend of Zelda</a></li>
+                    <li><a href="#">Final Fantasy</a></li>
+                    <li><a href="#">Бойни</a></li>
+                </ul>
+            </nav>
+            <div class="content-container">
+
+            <div class="grid-container">
+                <div class="grid">
+                    <div class="grid-item">
+                        <h2>Super Mario Bros.</h2>
+                        <p>Nintendo</p>
+                    </div>
+                    <div class="grid-item">
+                        <h2>The Legend of Zelda</h2>
+                        <p>Nintendo</p>
+                    </div>
+                    <div class="grid-item">
+                        <h2>Pac-Man</h2>
+                        <p>Namco</p>
+                    </div>
+                    <div class="grid-item">
+                        <h2>Metroid</h2>
+                        <p>Nintendo</p>
+                        
+                    </div>
+                   
+                    <div class="grid-item">
+                        <h2>Galaga</h2>
+                        <p>Namco</p>
+                        
+                    </div>
+                    <div class="grid-item">
+                        <h2>Space Invaders</h2>
+                        <p>Taito Corporation</p>
+                        
+                    </div>
+                    <div class="grid-item">
+                        <h2>Donkey Kong</h2>
+                        <p>Nintendo</p>
+                       
+                    </div>
+                    <div class="grid-item">
+                        <h2>Barbie</h2>
+                        <p>Namco</p>
+                        
+                    </div>
+                    <div class="grid-item">
+                        <h2>Final Fantasy</h2>
+                        <p>Square Enix</p>
+                        
+                    </div>
+                    <div class="grid-item">
+                        <h2>Chrono Trigger</h2>
+                        <p>Square Enix</p>
+                       
+                    </div>
+                    <div class="grid-item">
+                        <h2>EarthBound</h2>
+                        <p>Nintendo</p>
+                        
+                    </div>
+                    <div class="grid-item">
+                        <h2>Lufia II: Rise of the Sinistrals</h2>
+                        <p>Neverland</p>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
 
 </body>
     
@@ -38,5 +127,23 @@
     </footer>
     
     <script src="script.js"></script>
+    <script>
+        function searchTitles() {
+            var input, filter, gridItems, h2, i, txtValue;
+            input = document.getElementById('searchInput');
+            filter = input.value.toUpperCase();
+            gridItems = document.getElementsByClassName('grid-item');
+    
+            for (i = 0; i < gridItems.length; i++) {
+                h2 = gridItems[i].getElementsByTagName("h2")[0];
+                txtValue = h2.textContent || h2.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    gridItems[i].style.display = "";
+                } else {
+                    gridItems[i].style.display = "none";
+                }
+            }
+        }
+    </script>
 
 </html>
